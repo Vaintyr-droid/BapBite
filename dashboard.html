@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bapbite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="dashboard-page">
+
+    <div class="app-container">
+        <header class="dash-header">
+            <div class="header-info">
+                <h2 id="user-greeting">Kamusta!</h2>
+                <div class="shop-toggle-container" id="seller-toggle-ui" style="display: none;">
+                    <label class="switch">
+                        <input type="checkbox" id="shop-toggle" onchange="toggleShop()">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="shop-status-text" class="status-badge online">🟢 Open</span>
+                </div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button class="icon-btn" onclick="window.location.href='order.html'" title="View Cart">🛒</button>
+                <button class="icon-btn" onclick="handleLogout()" title="Log Out">🚪</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="upgrade-banner" class="upgrade-banner" style="display: none;">
+                <div>
+                    <h3>Start Selling on Bapbite!</h3>
+                    <p>Turn your recipes into income today.</p>
+                </div>
+                <button class="action-btn small-btn" onclick="setupShop()">Open Shop</button>
+            </div>
+
+            <div id="seller-dashboard" style="display: none; margin-bottom: 30px;">
+                <h3 class="section-title">Shop Overview</h3>
+                <div class="stats-grid">
+                    <div class="stat-card gradient-green">
+                        <p>Total Income</p>
+                        <h2 id="stat-income">₱ 0.00</h2>
+                    </div>
+                    <div class="stat-card">
+                        <p>Daily Views</p>
+                        <h2>342 👀</h2>
+                    </div>
+                    <div class="stat-card full-width pending-card">
+                        <div class="card-left">
+                            <p>Active Orders</p>
+                            <h2 class="text-orange" id="stat-pending">0 Orders</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Active Customer Orders</h3>
+                <div class="card">
+                    <ul id="seller-order-list" class="item-list">
+                        </ul>
+                </div>
+
+                <h3 class="section-title toggle-header" onclick="toggleVisibility('seller-history-container')">
+                    Transaction History <span>▼</span>
+                </h3>
+                <div class="card" id="seller-history-container" style="display: none;">
+                    <ul id="seller-history-list" class="item-list">
+                        </ul>
+                </div>
+
+                <h3 class="section-title">Manage Menu</h3>
+                <div class="card">
+                    <div class="add-merch-form">
+                        <input type="text" id="item-name" placeholder="Item Name (e.g., Combo A)">
+                        <input type="number" id="item-price" placeholder="Price (₱)">
+                        <button class="action-btn small-btn" onclick="addMerch()">Add</button>
+                    </div>
+                    <p id="merch-error" class="message error" style="display:none;"></p>
+                    <ul id="merch-list" class="item-list"></ul>
+                </div>
+            </div>
+
+            <div id="buyer-purchases-section" style="margin-bottom: 30px;">
+                <h3 class="section-title">My Recent Purchases</h3>
+                <div class="card">
+                    <ul id="buyer-order-list" class="item-list"></ul>
+                </div>
+            </div>
+
+            <div id="campus-feed-section">
+                <h3 class="section-title">Local Sellers Merchandise</h3>
+                <p id="feed-message" class="message success" style="display: none; margin-bottom: 10px;"></p>
+                <div id="global-feed" class="feed-grid"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

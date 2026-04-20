@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bapbite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div id="auth-section">
+            <div class="card">
+                <h1>Create Account</h1>
+                <p>Join Bapbite Seller Center</p>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="reg-username" placeholder="Choose a username">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-password" placeholder="Min 6 characters">
+                </div>
+                <p id="reg-message" class="message"></p>
+                <button class="action-btn" onclick="handleRegister()">Sign Up</button>
+                
+                <p class="toggle-text">Already have an account? <a href="login.html" class="link">Log In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

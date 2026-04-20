@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Bapbite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="admin-page">
+
+    <div class="app-container admin-container">
+        <header class="admin-header">
+            <h2>🛡️ Admin Control</h2>
+            <p>Platform Management</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <h3>Active Orders (Action Required)</h3>
+                <ul id="admin-order-list" class="admin-list" style="margin-top: 15px;">
+                    </ul>
+            </div>
+
+            <div class="card">
+                <h3>Transaction History (Archived)</h3>
+                <ul id="admin-history-list" class="admin-list" style="margin-top: 15px;">
+                    </ul>
+            </div>
+
+            <div class="card">
+                <h3>Registered Users</h3>
+                <ul id="admin-user-list" class="admin-list" style="margin-top: 15px;">
+                    </ul>
+            </div>
+            
+            <button class="logout-btn" onclick="window.location.href='login.html'" style="margin-top: 20px;">Exit Admin Panel</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

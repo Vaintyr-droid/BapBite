@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bapbite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div id="auth-section">
+            <div class="card">
+                <h1>Welcome Back</h1>
+                <p>Log in to manage your store.</p>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="login-username" placeholder="Enter username">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" placeholder="Enter password">
+                </div>
+                <p id="login-message" class="message"></p>
+                <button class="action-btn" onclick="handleLogin()">Log In</button>
+                
+                <p class="toggle-text">New here? <a href="register.html" class="link">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
