@@ -6,10 +6,10 @@ window.onload = () => {
     const isOrderPage = document.getElementById("order-page") !== null; 
 
     if (isDashboard) {
-        if (!activeUser) window.location.href = "login.html";
+        if (!activeUser) window.location.href = "index.html";
         else initDashboard(activeUser);
     } else if (isOrderPage) {
-        if (!activeUser) window.location.href = "login.html";
+        if (!activeUser) window.location.href = "index.html";
         else renderCart(); 
     } else if (isLoginPage && activeUser) {
         window.location.href = "dashboard.html";
@@ -58,7 +58,7 @@ function handleRegister() {
     localStorage.setItem('bapbite_users', JSON.stringify(users));
 
     showMessage("reg-message", "Success! Redirecting...", "success");
-    setTimeout(() => window.location.href = "login.html", 1500); 
+    setTimeout(() => window.location.href = "index.html", 1500); 
 }
 
 function handleLogin() {
@@ -81,7 +81,7 @@ function handleLogin() {
 
 function handleLogout() {
     localStorage.removeItem('activeUser'); 
-    window.location.href = "login.html"; 
+    window.location.href = "index.html"; 
 }
 
 function initDashboard(username) {
