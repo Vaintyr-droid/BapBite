@@ -18,20 +18,36 @@ body { background-color: #e2e8f0; display: flex; justify-content: center; min-he
 .input-group input, .add-merch-form input {
     width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 15px; background: #f8fafc;
 }
-.input-group input:focus, .add-merch-form input:focus { outline: none; border-color: #10b981; background: #fff; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
+
+
+.input-group input:focus, .add-merch-form input:focus { 
+    outline: none; 
+    border-color: #e98909; 
+    background: #fff; 
+    box-shadow: 0 0 0 3px rgba(233, 137, 9, 0.15); 
+}
+
 
 .action-btn { width: 100%; padding: 14px; background-color: #e98909; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.2s; }
 .action-btn:hover { background-color: #c77205; }
 .small-btn { width: auto; padding: 10px 20px; font-size: 14px; }
-.outline-btn { background: transparent; border: 2px solid #f97316; color: #f97316; }
+
+
+.outline-btn { background: transparent; border: 2px solid #e98909; color: #e98909; }
 .icon-btn { background: #f1f5f9; border: none; font-size: 20px; padding: 10px; border-radius: 50%; cursor: pointer; }
 .logout-btn { background: #fee2e2; color: #ef4444; border: none; padding: 12px; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%;}
 
 .toggle-text { margin-top: 20px; text-align: center; font-size: 14px; color: #64748b;}
-.link { color: #10b981; font-weight: 600; cursor: pointer; text-decoration: none; }
+
+
+.link { color: #e98909; font-weight: 600; cursor: pointer; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+
 .message { font-size: 14px; font-weight: 600; text-align: center; margin-bottom: 15px; padding: 10px; border-radius: 8px;}
 .error { background: #fee2e2; color: #ef4444; }
-.success { background: #d1fae5; color: #10b981; }
+
+
+.success { background: #fef3c7; color: #d97706; }
 
 .dash-header { background: #FFF; padding: 25px 20px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #e2e8f0; border-radius: 0 0 20px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.02);}
 header h2 { font-size: 22px; color: #0f172a; margin-bottom: 5px;}
@@ -41,11 +57,15 @@ header h2 { font-size: 22px; color: #0f172a; margin-bottom: 5px;}
 .switch input { opacity: 0; width: 0; height: 0; }
 .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 34px; }
 .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
-input:checked + .slider { background-color: #10b981; }
+
+
+input:checked + .slider { background-color: #e98909; }
 input:checked + .slider:before { transform: translateX(22px); }
 
 .status-badge { font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
-.status-badge.online { background: #d1fae5; color: #059669; }
+
+
+.status-badge.online { background: #fef3c7; color: #d97706; }
 .status-badge.offline { background: #e2e8f0; color: #64748b; }
 
 main { padding: 20px; }
@@ -56,9 +76,11 @@ main { padding: 20px; }
 .stat-card.full-width { grid-column: span 2; flex-direction: row; justify-content: space-between; align-items: center;}
 .stat-card p { font-size: 13px; color: #64748b; margin-bottom: 5px; font-weight: 600;}
 .stat-card h2 { font-size: 24px; color: #0f172a; }
-.gradient-green { background: linear-gradient(135deg, #10b981, #059669); color: white;}
+
+
+.gradient-green { background: linear-gradient(135deg, #e98909, #c77205); color: white;}
 .gradient-green p, .gradient-green h2 { color: white; }
-.text-orange { color: #f97316 !important; }
+.text-orange { color: #e98909 !important; }
 
 .add-merch-form { display: flex; gap: 10px; margin-bottom: 15px; }
 .item-list { list-style: none; margin-top: 15px; }
@@ -72,14 +94,20 @@ main { padding: 20px; }
 .user-details { margin-bottom: 10px; }
 .user-details strong { font-size: 16px; color: #0f172a; }
 .badge { font-size: 11px; padding: 3px 8px; border-radius: 10px; font-weight: bold; text-transform: uppercase; margin-left: 5px;}
-.b-active { background: #d1fae5; color: #059669; }
+
+
+.b-active { background: #fef3c7; color: #d97706; }
 .b-halted { background: #fef3c7; color: #d97706; }
 .b-terminated { background: #fee2e2; color: #ef4444; }
 .admin-actions { display: flex; gap: 10px; margin-top: 10px;}
 .admin-btn { flex: 1; padding: 8px; border: none; border-radius: 6px; font-size: 13px; font-weight: bold; cursor: pointer;}
 .btn-halt { background: #f59e0b; color: white; }
 .btn-term { background: #ef4444; color: white; }
-.btn-restore { background: #10b981; color: white; }
+
+
+.btn-restore { background: #e98909; color: white; }
+.btn-restore:hover { background: #c77205; }
+
 .cart-total-section {
     display: flex;
     justify-content: flex-end;
@@ -96,11 +124,13 @@ main { padding: 20px; }
 }
 .badge-pending { background: #fef3c7; color: #d97706; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase;}
 .badge-verified { background: #dbeafe; color: #2563eb; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase;}
-.badge-completed { background: #d1fae5; color: #10b981; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase;}
+
+.badge-completed { background: #fef3c7; color: #e98909; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase;}
 .badge-cancelled { background: #fee2e2; color: #ef4444; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase;}
 
 .order-box { border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; margin-bottom: 15px;}
 .order-box:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+
 .toggle-header {
     cursor: pointer;
     display: flex;
@@ -109,7 +139,8 @@ main { padding: 20px; }
     user-select: none;
     transition: color 0.2s;
 }
-.toggle-header:hover { color: #10b981; }
+
+.toggle-header:hover { color: #e98909; }
 
 .seller-group-header {
     background: #f1f5f9; 
