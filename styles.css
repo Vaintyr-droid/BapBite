@@ -21,7 +21,7 @@ body { background-color: #e2e8f0; display: flex; justify-content: center; min-he
 .input-group input:focus, .add-merch-form input:focus { outline: none; border-color: #10b981; background: #fff; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
 
 .action-btn { width: 100%; padding: 14px; background-color: #e98909; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.2s; }
-.action-btn:hover { background-color: #e98909; }
+.action-btn:hover { background-color: #c77205; }
 .small-btn { width: auto; padding: 10px 20px; font-size: 14px; }
 .outline-btn { background: transparent; border: 2px solid #f97316; color: #f97316; }
 .icon-btn { background: #f1f5f9; border: none; font-size: 20px; padding: 10px; border-radius: 50%; cursor: pointer; }
